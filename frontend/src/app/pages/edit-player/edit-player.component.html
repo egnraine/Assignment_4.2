@@ -1,0 +1,73 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+            Edit Player
+        </h1>
+
+        <form [formGroup]="editPlayerForm" (ngSubmit)="onSubmit()">
+
+            <div>
+              <label for="last_name">
+                Last Name
+              </label>
+              <input id="last_name" type="text" style="margin-block-end: 10px" formControlName="last_name">
+            </div>
+          
+            <div>
+              <label for="first_name">
+                First Name
+              </label>
+              <input id="first_name" type="text" style="margin-block-end: 10px" formControlName="first_name">
+            </div>
+
+            <div>
+                <label for="hometown">
+                Hometown
+                </label>
+                <input id="hometown" type="text" style="margin-block-end: 10px" formControlName="hometown">
+            </div>
+
+            <div>
+                <label for="classYear">
+                Class
+                </label>
+                <input id="classYear" type="text" style="margin-block-end: 10px" formControlName="classYear">
+            </div>
+
+            <div>
+                <label for="p_time">
+                Prelim Time
+                </label>
+                <input id="p_time" type="text" style="margin-block-end: 10px" formControlName="p_time">
+            </div>
+
+            <div>
+                <label for="f_time">
+                Final Time
+                </label>
+                <input id="f_time" type="text" style="margin-block-end: 10px" formControlName="f_time">
+            </div>
+
+            <div>
+                <label for="imp">
+                Improvement
+                </label>
+                <input id="imp" type="text" style="margin-block-end: 10px" formControlName="imp">
+            </div>
+
+            <div>
+                <label for="event">
+                Event
+                </label>
+                <input id="event" type="text" style="margin-block-end: 10px" formControlName="event">
+            </div>
+
+            <button class="button" type="submit" style="margin-top: 15px;" (click)="onSubmit()" routerLink="/">Update</button>
+          </form>
+          
+          <button class="button" style="margin-top: 15px;" (click)="onDelete()" routerLink="/">Delete Player</button>
+          <button class="button" style="margin-top: 15px; margin-left: 15px;" routerLink="/">Cancel</button>
+
+
+    </div>
+</div>

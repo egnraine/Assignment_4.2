@@ -1,0 +1,28 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+            Add a new player
+        </h1>
+        
+        <form [formGroup]="addPlayerForm" (ngSubmit)="onSubmit()">
+
+            <div>
+              <label for="last_name">
+                Last Name
+              </label>
+              <input id="last_name" type="text" style="margin-block-end: 10px" formControlName="last_name">
+            </div>
+          
+            <div>
+              <label for="first_name">
+                First Name
+              </label>
+              <input id="first_name" type="text" formControlName="first_name">
+            </div>
+
+            <button class="button" type="submit" (click)="onSubmit()" routerLink="/">Submit</button>
+            <button routerLink="/" class="button" style="margin-top: 15px; margin-left: 15px;">Cancel</button>
+
+          </form>
+    </div>
+</div>

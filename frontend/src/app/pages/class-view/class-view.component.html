@@ -1,0 +1,55 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+
+        <div class="sidebar">
+            <h1 class="title has-text-primary">
+                Task
+            </h1>
+
+            <div class="list-menu">
+                <a class="menu-item" routerLink="/add-player">
+                    Add Players
+                </a>
+                <a class="menu-item" routerLink="/prelim" routerLinkActive="is-active">
+                    <p>Best Prelim Time</p>
+                </a>
+                <a class="menu-item" routerLink="/final" routerLinkActive="is-active">
+                    <p>Best Final Times</p>
+                </a>
+                <a class="menu-item" routerLink="/worst" routerLinkActive="is-active">
+                    <p>Worst Final Times</p>
+                </a>
+                <a class="menu-item" routerLink="/imp" routerLinkActive="is-active">
+                    <p>Highest Imp</p>
+                </a>
+                <a class="menu-item" routerLink="/class" routerLinkActive="is-active">
+                    <p>Best Upcoming Freshman</p>
+                </a>
+            </div>
+
+        </div>
+     
+
+        <div class="output-container">
+            <h1 class="title has-text-primary">
+                Players
+            </h1>
+
+            <!-- Output Elements -->
+            <div class="output" *ngFor="let players of players">
+                <p [routerLink]="['/players', players._id]">
+                    Name: {{ players.last_name }}, {{ players.first_name }}
+                    <br>Hometown: {{ players.hometown }}
+                    <br>Class: {{ players.class }}
+                    <br>Prelim Time: {{ players.p_time }}
+                    <br>Final Time: {{ players.f_time }}
+                    <br>Improvement: {{ players.imp }}
+                    <br>Event {{ players.event }}
+                </p>
+            </div>                
+
+
+        </div>
+        
+    </div>
+</div>
